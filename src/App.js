@@ -10,7 +10,7 @@ import './App.css';
 import InfoBox from './components/InfoBox';
 import Map from './components/Map';
 import Table from './components/Table';
-import { sortData } from './services/utils';
+import { sortData, prettyPrintStat } from './services/utils';
 import LineGraph from './components/LineGraph';
 import { BASE_URL } from './constants';
 import 'leaflet/dist/leaflet.css';
@@ -96,20 +96,21 @@ function App() {
 				<div className='app__stats'>
 					<InfoBox
 						title='Corona Virus Cases'
-						total={countryInfo.cases}
-						cases={countryInfo.todayCases}
+						total={prettyPrintStat(countryInfo.cases)}
+						cases={prettyPrintStat(countryInfo.todayCases)}
 					/>
 					<InfoBox
 						title='Recovered'
-						total={countryInfo.recovered}
-						cases={countryInfo.todayRecovered}
+						total={prettyPrintStat(countryInfo.recovered)}
+						cases={prettyPrintStat(countryInfo.todayRecovered)}
 					/>
 					<InfoBox
 						title='Deaths'
-						total={countryInfo.deaths}
-						cases={countryInfo.todayDeaths}
+						total={prettyPrintStat(countryInfo.deaths)}
+						cases={prettyPrintStat(countryInfo.todayDeaths)}
 					/>
 				</div>
+
 				<Map
 					countries={mapCountries}
 					casesType='cases'
@@ -121,7 +122,10 @@ function App() {
 				<CardContent>
 					<h3>Live Cases by Country</h3>
 					<Table countries={tableData} />
+					<br />
+
 					<h3>Worldwide New Cases</h3>
+					<br />
 					<LineGraph />
 				</CardContent>
 			</Card>

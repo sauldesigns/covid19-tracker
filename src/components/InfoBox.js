@@ -4,13 +4,13 @@ import './InfoBox.css';
 
 function InfoBox({ title, cases, total }) {
 	return (
-		<Card className='info_box'>
+		<Card className='infoBox'>
 			<CardContent>
-				<Typography className='info_box__title' color='textSecondary'>
+				<Typography className='infoBox__title' color='textSecondary'>
 					{title}
 				</Typography>
-				<h2 className='info_box__cases'>{cases}</h2>
-				<Typography className='info_box__total' color='textSecondary'>
+				<h2 className='infoBox__cases'>{cases}</h2>
+				<Typography className='infoBox__total' color='textSecondary'>
 					{total} Total
 				</Typography>
 			</CardContent>
