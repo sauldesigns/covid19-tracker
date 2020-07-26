@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "mushare-a0cb8"
+  },
+  "targets": {
+    "mushare-a0cb8": {
+      "hosting": {
+        "covid": [
+          "covid-19-tracker-f1f34"
+        ]
+      }
+    }
+  }
+}
