@@ -11,7 +11,8 @@ import InfoBox from './components/InfoBox';
 import Map from './components/Map';
 import Table from './components/Table';
 import { sortData } from './services/utils';
-const BASE_URL = 'https://disease.sh/v3';
+import LineGraph from './components/LineGraph';
+import { BASE_URL } from './constants';
 
 function App() {
 	const [countries, setCountries] = useState([]);
@@ -104,6 +105,7 @@ function App() {
 					<h3>Live Cases by Country</h3>
 					<Table countries={tableData} />
 					<h3>Worldwide New Cases</h3>
+					<LineGraph />
 				</CardContent>
 			</Card>
 		</div>

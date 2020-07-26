@@ -1,7 +1,12 @@
+table {
+	width: 100%;
+}
+
 .table {
 	margin-top: 20px;
 	overflow: scroll;
 	height: 400px;
+
 	color: #6a5d5d;
 }
 
